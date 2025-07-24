@@ -1,0 +1,41 @@
+.about-preview {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.about-container {
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-button {
+  display: inline-block;
+  background-color: #006400;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #004d00;
+}
