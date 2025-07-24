@@ -5,6 +5,8 @@ import ServicesSection from './components/ServicesSection.jsx';
 import AboutPreview from './components/AboutPreview.jsx';
 import TestimonialsSection from './components/TestimonialsSection.jsx';
 import CTASection from './components/CTASection';
+import FooterSection from './components/FooterSection.jsx';
+
 
 
 
@@ -17,6 +19,8 @@ function App() {
       <AboutPreview />
       <TestimonialsSection />
       <CTASection />
+      <FooterSection />
+
 
       <main style={{ padding: '40px', textAlign: 'center' }}>
         <h1>Testing the Header Component</h1>
