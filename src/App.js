@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header.jsx';
+import HeroBanner from './components/HeroBanner.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <HeroBanner />
+      <main style={{ padding: '40px', textAlign: 'center' }}>
+        <h1>Testing the Header Component</h1>
+        <p>This is where your homepage content will go.</p>
+      </main>
     </div>
   );
 }
