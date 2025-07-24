@@ -1,34 +1,43 @@
 .header {
-  background-color: #006400; /* deep green */
-  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #ffffff;
+  background-color: #111; /* Dark background */
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  font-size: 22px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.site-title {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
+  white-space: nowrap;
 }
 
-.nav {
+.nav-links {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
 }
 
-.nav-link {
-  color: #ffffff;
+.nav-item {
+  color: white;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-.nav-link:hover {
-  background-color: #00cc66; /* hover accent green */
-  color: #000000;
+.nav-item:hover {
+  color: #00ffae; /* Accent color on hover */
 }
