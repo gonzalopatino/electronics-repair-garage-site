@@ -1,32 +1,31 @@
+// src/App.js
 import React from 'react';
-import Header from './components/Header.jsx';
-import HeroBanner from './components/HeroBanner.jsx';
-import ServicesSection from './components/ServicesSection.jsx';
-import AboutPreview from './components/AboutPreview.jsx';
-import TestimonialsSection from './components/TestimonialsSection.jsx';
-import CTASection from './components/CTASection';
-import FooterSection from './components/FooterSection.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
-
-
+import Header from './components/shared/Header';
+import Footer from './components/shared/FooterSection';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <HeroBanner />
-      <ServicesSection />
-      <AboutPreview />
-      <TestimonialsSection />
-      <CTASection />
-      <FooterSection />
 
-
-      <main style={{ padding: '40px', textAlign: 'center' }}>
-        <h1>Testing the Header Component</h1>
-        <p>This is where your homepage content will go.</p>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
-    </div>
+
+      <Footer />
+    </Router>
   );
 }
 
