@@ -1,20 +1,24 @@
 import React from 'react';
-import './Header.css';
-import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.png'; // Corrected path
+import './Header.css'; // Corrected CSS file
+
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="header-left">
-        <img src={logo} alt="Electronics Repair Garage Logo" className="logo" />
-        <span className="site-title">ELECTRONICS REPAIR GARAGE</span>
+    <header className="header-container">
+      <div className="header-content">
+        <Link to="/" className="logo-container">
+          <img src={logo} alt="Logo" className="logo-img" />
+          <span className="brand-name">ELECTRONICS REPAIR GARAGE</span>
+        </Link>
+        <nav className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
       </div>
-      <nav className="nav-links">
-        <a href="/" className="nav-item">Home</a>
-        <a href="/services" className="nav-item">Services</a>
-        <a href="/about" className="nav-item">About Us</a>
-        <a href="/contact" className="nav-item">Contact</a>
-      </nav>
     </header>
   );
 };
