@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png'; // Corrected path
-import './Header.css'; // Corrected CSS file
-
+import logo from '../../assets/logo.png';
+import './Header.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <header className="header-container">
       <div className="header-content">
@@ -12,12 +15,19 @@ const Header = () => {
           <img src={logo} alt="Logo" className="logo-img" />
           <span className="brand-name">ELECTRONICS REPAIR GARAGE</span>
         </Link>
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact</Link>
+
+        <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <Link to="/" onClick={toggleMenu}>Home</Link>
+          <Link to="/services" onClick={toggleMenu}>Services</Link>
+          <Link to="/about" onClick={toggleMenu}>About Us</Link>
+          <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         </nav>
+
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+          <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+          <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+        </div>
       </div>
     </header>
   );

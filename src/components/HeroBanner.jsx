@@ -1,17 +1,31 @@
-import React from 'react';
-import logo from '../assets/logo.png';
-import '../components/HeroBanner.css';
+import React, { useEffect, useState } from 'react';
+import './HeroBanner.css';
+import img1 from '../assets/img1.png';
+import img2 from '../assets/img2.png';
+import img3 from '../assets/img3.png';
+
+const images = [img1, img2, img3];
 
 const HeroBanner = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="hero-banner">
-      <div className="hero-center">
-        <div className="hero-logo-title">
-          <img src={logo} alt="Logo" className="hero-logo" />
-          <h1 className="hero-title">Electronics Repair Garage</h1>
+      <img src={images[current]} alt="Hero Slide" className="hero-image" />
+      <div className="hero-overlay">
+        <h1>ELECTRONICS REPAIR GARAGE</h1>
+        <p>Smart • Sustainable • Reliable Electronics Repair</p>
+        <div className="hero-buttons">
+          <button>Request a Quote</button>
+          <button>View Services</button>
         </div>
-        <p className="hero-subtitle">Smart • Sustainable • Reliable Electronics Repair</p>
-        <a href="/contact" className="hero-cta">Request a Quote</a>
       </div>
     </section>
   );
