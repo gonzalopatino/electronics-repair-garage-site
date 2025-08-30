@@ -23,16 +23,10 @@ function ServicesSection() {
       details: 'Specializing in analog audio systems, radios, turntables, and rare components. Non-invasive methods used.'
     },
     {
-      title: 'PC & Laptop Repairs',
-      description: 'Full diagnostics, virus removal, component replacement and upgrades.',
+      title: 'PC General Maintenance & Laptop Repairs',
+      description: 'Full diagnostics, general maintenance, component replacement and upgrades.',
       icon: '💻',
       details: 'RAM, SSD, screen, keyboard, fan replacement, motherboard reflow and OS reinstallation available.'
-    },
-    {
-      title: 'Remote IT Support',
-      description: 'Get expert help over the internet — fast, secure, and convenient.',
-      icon: '🌐',
-      details: 'Setup, optimization, software troubleshooting, and remote diagnostics with screen sharing.'
     },
     {
       title: 'Audio/Video Equipment',
